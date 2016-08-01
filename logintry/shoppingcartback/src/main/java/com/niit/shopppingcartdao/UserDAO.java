@@ -17,6 +17,6 @@ public List<User> list();
 	
 	public void delete(String id);
 	
-	public boolean isValidUser(String id, String name, boolean isAdmin);
+	public boolean isValidUser(String id, String password, boolean isAdmin);
 
 }

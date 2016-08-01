@@ -18,9 +18,9 @@ public class UserTest {
 		User user = (User) context.getBean("user");
 		
 		// Create Operation
-		user.setId("CG01");
-		user.setPassword("123211");
-		user.setIsadmin(true);
+		user.setId("CG02");
+		user.setPassword("1234");
+		user.setIsadmin(false);
 	  
 		
 	    userDAO.saveOrUpdate(user);

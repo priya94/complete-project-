@@ -15,8 +15,6 @@
 <br><br><br><br>
 <br><br><br>
 <br><br><br><br><br><br><br>
-
-<br><br><br>
 <footer>
  <center> <p>By: Abin babu</p>
   <p>Contact information: <a href="abinsee.com">

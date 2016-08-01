@@ -13,37 +13,37 @@
 <title>welcome</title>
 </head>
 <body>
-
-	<c:choose>
-		<c:when test="${empty loggedInUser}">
-Exist user ?  <a href="login">Login</a>
-			<br>
-			<br>
-		</c:when>
-	</c:choose>
+	<table width="100%">
+		<tr>
 
 
+			<c:choose>
+				<c:when test="${empty loggedInUser}">
+					<td align="left">Exist user ? <a href="loginhere">Login</a></td>
 
 
-
-	New user ?
-	<a href="register">register</a>
+					<td align="center">New user ? <a href="register">register</a></td>
 
 
-
-
-
+				</c:when>
+			</c:choose>
+		</tr>
+	</table>
 	<div id="login">
 		<c:if
 			test="${isUserClickedLoginHere==true || invalidCredentials==true}">
+			<div id="error">${errorMessage}</div>
+			<%@ include file="login.jsp"%>
 
-			<%@ include file="login.jsp" %>
+		</c:if>
+	</div>
+
+	<div id="register">
+		<c:if test="${isUserClickedRegisterHere==true}">
+			<%@ include file="register.jsp"%>
 
 		</c:if>
 	</div>
 </body>
 </html>
-
-
-
 <%@ include file="footer.jsp"%>

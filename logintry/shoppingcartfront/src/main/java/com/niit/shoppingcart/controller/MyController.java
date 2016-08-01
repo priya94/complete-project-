@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.niit.shoppingcartback.*;
 
 @Controller
 public class MyController {
@@ -19,22 +18,17 @@ public class MyController {
 		
 	}
 	
-	
-	@RequestMapping("/register")
-	public ModelAndView myfuns()
-	{
-		
-		ModelAndView mv = new ModelAndView("/register");
-		return mv;
-		
-	}
-	
-	@RequestMapping("/login")
+	@RequestMapping("/loginhere")
 	public ModelAndView login() {
 		ModelAndView mv = new ModelAndView("/home");
 		mv.addObject("isUserClickedLoginHere", "true");
 		return mv;
 	}
-	
+	@RequestMapping("/register")
+	public ModelAndView register() {
+		ModelAndView mv = new ModelAndView("/home");
+		mv.addObject("isUserClickedRegisterHere", "true");
+		return mv;
+	}	
 }
 
