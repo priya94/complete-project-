@@ -1,5 +1,6 @@
 package com.niit.shoppingcart.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,5 +54,18 @@ public class UserController {
 
 		return mv;
 	}
+	@RequestMapping("/logout")
+	public ModelAndView logout(HttpServletRequest request, HttpSession session) {
+		ModelAndView mv = new ModelAndView("home");
+		session.invalidate();
+		session = request.getSession(true);
+//		session.setAttribute("category", category);
+//		session.setAttribute("categoryList", categoryDAO.list());
+	
+		mv.addObject("logoutMessage", "You successfully logged out");
+		mv.addObject("loggedOut", "true");
+	
+		return mv;
+	 }
 
 }
