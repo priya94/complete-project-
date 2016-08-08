@@ -13,180 +13,202 @@
 <head>
 
 
-<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/carousel.css" />"
+	rel="stylesheet">
 
 
 
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>welcome</title>
 </head>
 <body>
-<div class="navbar-wrapper">
-      <div class="container">
+	<div class="navbar-wrapper">
+		<div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">ShOPPIng CHart</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                
-                <div class="navbar-form navbar-right">
-                
-                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#mysignin">Sign in</button>
-                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#mysignup">Sign up</button>
-                
-                </div>
-              </ul>
-            </div>
-          </div>
-        </nav>
+			<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">ShOPPIng CHart</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
 
-      </div>
-    </div>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
 
+						<div class="navbar-form navbar-right">
 
+							<button type="submit" class="btn btn-success" data-toggle="modal"
+								data-target="#mysignin">Sign in</button>
+							<button type="submit" class="btn btn-success" data-toggle="modal"
+								data-target="#mysignup">Sign up</button>
 
+						</div>
+					</ul>
+				</div>
+			</div>
+			</nav>
 
-
-<div class="container">
-  
-  
-
-  <!-- Modal -->
-  <div class="modal fade" id="mysignin" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">login here</h4>
-        </div>
-        <div class="modal-body">
-         <c:url var="action" value="/login"></c:url>
-
-	<form:form action="${action}" method="post">
-		<table>
-			<tr>
-				<td>User Name:</td>
-				
-				<td><input type="text" name="name"></td>
-			</tr>
-
-			<tr>
-				<td>Password:</td>
-				<td><input type="password" name="password" /></td>
-			</tr>
-	
-		</table>
-        </div>
-        <div class="modal-footer">
-          <td><input type="submit" value="Login"></td>
-        </div>
-        </form:form>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
+		</div>
+	</div>
 
 
 
 
 
+	<div class="container">
 
-    <!-- Carousel
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="mysignin" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">login here</h4>
+					</div>
+					<div class="modal-body">
+						<c:url var="action" value="/login"></c:url>
+
+						<form:form action="${action}" method="post">
+							<table>
+								<tr>
+									<td>User Name:</td>
+
+									<td><input type="text" name="name"></td>
+								</tr>
+
+								<tr>
+									<td>Password:</td>
+									<td><input type="password" name="password" /></td>
+								</tr>
+
+							</table>
+					</div>
+					<div class="modal-footer">
+						<td><input type="submit" value="Login"></td>
+					</div>
+					</form:form>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+	<!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\sam.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Hurry..... don't wait..</h1>
-              
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\sony.jpg" alt="Second slide">
-          <div class="carousel-caption">
-              <h1>BIG saLE OffEr</h1>
-              
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\wash.jpg" alt="Third slide">
-          <div class="carousel-caption">
-              <h1>Go on....</h1>
-              
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img class="first-slide"
+					src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\sam.jpg"
+					alt="First slide">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Hurry..... don't wait..</h1>
+
+						<p>
+							<a class="btn btn-lg btn-primary" href="#" role="button">Sign
+								up today</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img class="second-slide"
+					src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\sony.jpg"
+					alt="Second slide">
+				<div class="carousel-caption">
+					<h1>BIG saLE OffEr</h1>
+
+					<p>
+						<a class="btn btn-lg btn-primary" href="#" role="button">Sign
+							up today</a>
+					</p>
+				</div>
+			</div>
+			<div class="item">
+				<img class="third-slide"
+					src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\wash.jpg"
+					alt="Third slide">
+				<div class="carousel-caption">
+					<h1>Go on....</h1>
+
+					<p>
+						<a class="btn btn-lg btn-primary" href="#" role="button">Sign
+							up today</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button"
+			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
+			aria-hidden="true"></span> <span class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel" role="button"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
 	<table width="100%">
 		<tr>
 
 
 			<c:choose>
 				<c:when test="${empty loggedInUser}">
-					
+
 
 
 					<td align="center">New user ? <a href="register">register</a></td>
-					</c:when>
+				</c:when>
 
 
-                   <c:when test="${not empty loggedInUser}">
-							<td>Welcome ${loggedInUser},</td>
-							<td align="right"><a href="logout"> logout</a></td>
-						</c:when>
-						
-		
+				<c:when test="${not empty loggedInUser}">
+					<td>Welcome ${loggedInUser},</td>
+					<td align="right"><a href="logout"> logout</a></td>
+				</c:when>
+
+
 			</c:choose>
 		</tr>
 		<tr>
-					<c:if test="${loggedOut==true}">
-						<td>${logoutMessage}</td>
-					</c:if>
-				</tr>
+			<c:if test="${loggedOut==true}">
+				<td>${logoutMessage}</td>
+			</c:if>
+		</tr>
 	</table>
 	<div id="login">
 		<c:if
@@ -196,25 +218,41 @@
 
 		</c:if>
 	</div>
-	
-	
-	<div id="admin">
 
-				<c:if test="${isAdmin==true}">
 
-					<%@ include file="adminHome.jsp"%>
-
-				</c:if>
-				</div>
-	
-	
-
-	<div id="register">
-		<c:if test="${isUserClickedRegisterHere==true}">
-			<%@ include file="register.jsp"%>
-
+	<div id="isAdmin">
+		<c:if test="${isAdmin==true }">
+			<%@ include file="Isadmin.jsp"%>
 		</c:if>
 	</div>
+
+	<div id="category">
+		<c:if test="${isAdminCLickedCategory==true }">
+			<%@ include file="Category.jsp"%>
+		</c:if>
+	</div>
+
+	<div id="product">
+		<c:if test="${isAdminClickedProduct==true }">
+			<%@ include file="Product.jsp"%>
+		</c:if>
+	</div>
+
+	<div id="supplier">
+		<c:if test="${isAdminClickedSupplier==true }">
+			<%@ include file="Supplier.jsp"%>
+		</c:if>
+	</div>
+
+
+
+
+		<div id="register">
+			<c:if test="${isUserClickedRegisterHere==true}">
+				<%@ include file="register.jsp"%>
+
+			</c:if>
+		</div>
 </body>
 </html>
 <%@ include file="footer.jsp"%>
