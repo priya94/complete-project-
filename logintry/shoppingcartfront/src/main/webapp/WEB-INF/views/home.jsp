@@ -11,6 +11,12 @@
 
 <html>
 <head>
+
+
+<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
+
+
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -120,16 +126,30 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\WEB-INF\resources\images\sam.JPG" alt="First slide">
-          
+          <img class="first-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\sam.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Hurry..... don't wait..</h1>
+              
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\WEB-INF\resources\images\sony.JPG" alt="Second slide">
-          
+          <img class="second-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\sony.jpg" alt="Second slide">
+          <div class="carousel-caption">
+              <h1>BIG saLE OffEr</h1>
+              
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\WEB-INF\resources\images\wash.JPG" alt="Third slide">
-          
+          <img class="third-slide" src="C:\Users\Abin\Desktop\logintry\shoppingcartfront\src\main\webapp\resources\images\wash.jpg" alt="Third slide">
+          <div class="carousel-caption">
+              <h1>Go on....</h1>
+              
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -176,6 +196,18 @@
 
 		</c:if>
 	</div>
+	
+	
+	<div id="admin">
+
+				<c:if test="${isAdmin==true}">
+
+					<%@ include file="adminHome.jsp"%>
+
+				</c:if>
+				</div>
+	
+	
 
 	<div id="register">
 		<c:if test="${isUserClickedRegisterHere==true}">

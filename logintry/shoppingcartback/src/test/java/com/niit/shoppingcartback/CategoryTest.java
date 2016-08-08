@@ -2,33 +2,30 @@ package com.niit.shoppingcartback;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.niit.shoppingcart.model.Category;
+import com.niit.shopppingcartdao.CategoryDAO;
 
-import com.niit.shoppingcart.model.User;
-import com.niit.shopppingcartdao.UserDAO;
-
-public class UserTest {
-
+public class CategoryTest {
+	
 	public static void main(String[] args) {
 
 		@SuppressWarnings("resource")
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.scan("com.niit");
 		context.refresh();
-		UserDAO userDAO = (UserDAO) context.getBean("userDao");
-		User user = (User) context.getBean("user");
+		CategoryDAO categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
+		Category category = (Category) context.getBean("category");
 		
 		// Create Operation
-		user.setId("CG02");
-		user.setPassword("1234");
-		user.setAdmin(false);
-	  
-		
-	    userDAO.saveOrUpdate(user);
+		category.setId("CG01");
+		category.setName("CGName01");
+		category.setDescription("CGDesc01");
+	    categoryDAO.saveOrUpdate(category);
 		
 	    // categoryDAO.delete("CG01"); --> Delete Operation
 		
 	    //Retrieve Operation
-	    if(userDAO.get("CG01")== null)
+	    if(categoryDAO.get("CG01")== null)
 		{
 			System.out.println("Category does not exist");
 		}

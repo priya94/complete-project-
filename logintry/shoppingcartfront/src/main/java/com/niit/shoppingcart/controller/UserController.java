@@ -33,17 +33,18 @@ public class UserController {
 			session.setAttribute("loggedInUser", user.getName());
 			System.out.println(user.getName() + "logged in");
 
-			// if (userDetails.getAdmin() == 1) {
-			// mv.addObject("isAdmin", "true");
-			//
-			// } else {
-			// mv.addObject("isAdmin", "false");
+			 if (user.isAdmin()) {
+	    	 mv.addObject("isAdmin", "true");	
+	    	 System.out.println(user.getName() + "admin logged in");
+			 }
+			else {
+		 mv.addObject("isAdmin", "false");
 			// cart = cartDAO.get(userID);
 			// mv.addObject("cart", cart);
 			// List<Cart> cartList = cartDAO.list();
 			// mv.addObject("cartList", cartList);
 			// mv.addObject("cartSize", cartList.size());
-			// }
+			 }
 
 		} else {
 

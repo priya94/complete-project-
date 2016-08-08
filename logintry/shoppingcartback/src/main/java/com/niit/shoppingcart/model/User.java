@@ -64,12 +64,13 @@ public class User {
 	
 	@Column(name="isadmin")
 	private boolean isAdmin;
-	public boolean isIsadmin() {
+	public boolean isAdmin() {
 		return isAdmin;
 	}
-	public void setIsadmin(boolean isAdmin) {
+	public void setAdmin(boolean isAdmin) {
 		this.isAdmin = isAdmin;
 	}
+	
 	
 	
 
